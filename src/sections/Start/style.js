@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -8,48 +9,27 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  .container--infos {
+  .mini--titles {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    .title {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      align-items: flex-start;
-      h1 {
-        font-family: var(--cinzelDecorative);
-        font-size: 30px;
-        color: var(--light);
-        width: 290px;
-        line-height: 40px;
-      }
-      img {
-        width: 240px;
-      }
+    align-items: center;
+    gap: 5px;
+    h4 {
+      font-size: 20px;
+      font-family: var(--firaSans);
     }
-    .mini--titles {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      h4 {
-        font-size: 20px;
-        font-family: var(--firaSans);
-      }
-      .dev {
-        color: var(--primary-Purple);
-      }
-      .and {
-        color: var(--white);
-      }
-      .engineer {
-        color: var(--purple-main);
-      }
-      @media screen and (min-width: 900px) {
-        flex-direction: row;
-        gap: 30px;
-      }
+    .dev {
+      color: var(--primary-Purple);
+    }
+    .and {
+      color: var(--light);
+    }
+    .engineer {
+      color: var(--purple-main);
+    }
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      gap: 30px;
     }
   }
   .circle--computer {
@@ -61,11 +41,11 @@ export const Container = styled.div`
     justify-content: center;
     border-radius: 50%;
     background-color: var(--primary-Purple);
-    .second--circle{
+    .second--circle {
       width: 85%;
       height: 85%;
       border-radius: 50%;
-      background-color: var(--darkBlue)
+      background-color: var(--darkBlue);
     }
     div.image--holder {
       user-select: none;
@@ -86,32 +66,17 @@ export const Container = styled.div`
       z-index: 8000;
     }
   }
-
+  @media screen and (min-width: 600px) {
+    div.circle--wrapper{
+      align-self: end;
+    }
+  }
   @media screen and (min-width: 768px) {
     margin-top: 150px;
     flex-direction: row;
     justify-content: space-between;
-    .container--infos {
-      align-items: flex-start;
-      gap: 20px;
-      .title {
-        gap: 20px;
-      }
-    }
   }
   @media screen and (min-width: 1000px) {
-    .container--infos {
-      .title {
-        h1 {
-          font-size: 50px;
-          line-height: 60px;
-          width: 500px;
-        }
-        img {
-          width: 300px;
-        }
-      }
-    }
     .circle--computer {
       width: 400px;
       height: 400px;
@@ -126,19 +91,6 @@ export const Container = styled.div`
     }
   }
   @media screen and (min-width: 1300px) {
-    .container--infos {
-      gap: 30px;
-      .title {
-        h1 {
-          font-size: 55px;
-          line-height: 60px;
-          width: 600px;
-        }
-        img {
-          width: 350px;
-        }
-      }
-    }
     .circle--computer {
       width: 500px;
       height: 500px;
@@ -148,6 +100,63 @@ export const Container = styled.div`
       div.grabbing {
         right: 210px;
         bottom: 40px;
+      }
+    }
+  }
+`;
+
+export const Infos = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    h1 {
+      font-family: var(--cinzelDecorative);
+      font-size: 30px;
+      color: var(--light);
+      width: 290px;
+      line-height: 40px;
+    }
+    img {
+      width: 240px;
+    }
+  }
+  @media screen and (min-width:600px){
+    align-self: start;
+  }
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+    gap: 20px;
+    .title {
+      gap: 20px;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .title {
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+        width: 400px;
+      }
+      img {
+        width: 300px;
+      }
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    gap: 30px;
+    .title {
+      h1 {
+        font-size: 55px;
+        line-height: 60px;
+        width: 600px;
+      }
+      img {
+        width: 350px;
       }
     }
   }

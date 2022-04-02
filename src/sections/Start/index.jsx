@@ -1,6 +1,6 @@
 import lines from "../../images/lines.svg";
 import computer from "../../images/computer.png";
-import { Container } from "./style";
+import { Container,Infos } from "./style";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Grabbing from "../../animationsLottie/Grabbing";
 
@@ -12,8 +12,7 @@ const Start = () => {
 
   return (
     <Container>
-      <motion.div
-        className="container--infos"
+      <Infos
         initial={{ opacity: 0, marginLeft: "-400px" }}
         animate={{ opacity: 1, marginLeft: 0 }}
         transition={{duration:1.2,type:"spring"}}
@@ -27,7 +26,7 @@ const Start = () => {
           <h4 className="and">{"&"}</h4>
           <h4 className="engineer">Computer Engineering</h4>
         </div>
-      </motion.div>
+      </Infos>
       <div className="circle--wrapper" style={{ perspective: 2000 }}>
         <motion.div
           className="circle--computer"
