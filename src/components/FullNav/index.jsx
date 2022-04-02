@@ -28,11 +28,11 @@ const FullNav = () => {
       variants={variantsNav}
     >
       <ul>
-        <Item key="item1" variants={variantsItem}><Link to={"/#icon"}>Home</Link></Item>
-        <Item key="item2" variants={variantsItem}><Link>About me</Link></Item>
-        <Item key="item3" variants={variantsItem}><Link>Skills</Link></Item>
-        <Item key="item4" variants={variantsItem}><Link>Projects</Link></Item>
-        <Item key="item5" variants={variantsItem}><Link>Contact</Link></Item>
+        <Item variants={variantsItem}><Link to={"/#icon"}>Home</Link></Item>
+        <Item variants={variantsItem}><Link>About me</Link></Item>
+        <Item variants={variantsItem}><Link>Skills</Link></Item>
+        <Item variants={variantsItem}><Link>Projects</Link></Item>
+        <Item variants={variantsItem}><Link>Contact</Link></Item>
       </ul>
     </FancyNav>
   );

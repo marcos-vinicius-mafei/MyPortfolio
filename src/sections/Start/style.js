@@ -4,10 +4,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 90%;
   max-width: 1366px;
-  margin-top: 120px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+  height: 100%;
+  justify-content: center;
   gap: 50px;
   .mini--titles {
     display: flex;
@@ -72,9 +75,13 @@ export const Container = styled.div`
     }
   }
   @media screen and (min-width: 768px) {
-    margin-top: 150px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-top:0;
+    div.circle--wrapper{
+      align-self: center;
+    }
   }
   @media screen and (min-width: 1000px) {
     .circle--computer {
@@ -129,6 +136,7 @@ export const Infos = styled(motion.div)`
     align-self: start;
   }
   @media screen and (min-width: 768px) {
+    align-self:center;
     align-items: flex-start;
     gap: 20px;
     .title {
@@ -157,6 +165,19 @@ export const Infos = styled(motion.div)`
       }
       img {
         width: 350px;
+      }
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    gap: 30px;
+    .title {
+      h1 {
+        font-size: 70px;
+        line-height: 80px;
+        width: 650px;
+      }
+      img {
+        width: 390px;
       }
     }
   }

@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export const Container = styled.div`
   width: 90%;
   max-width: 1366px;
-  margin-top: 110px;
+  margin-top: 100px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -31,19 +32,39 @@ export const Container = styled.div`
     }
   }
   @media screen and (min-width: 768px) {
-    margin-top: 150px;
+    margin-top: 0;
     flex-direction: row;
     justify-content: space-between;
-    .infos--main{
-        display: flex;
-        .title{
-            h1{
-                width: 300px;
-            }
+    align-items: center;
+    height: 100%;
+    .infos--main {
+      display: flex;
+      .title {
+        h1 {
+          width: 300px;
         }
+      }
     }
     .mini--container {
       gap: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .infos--main {
+      display: flex;
+      .title {
+        h1 {
+          width: fit-content;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .mini--container {
+      h4 {
+        width: 400px;
+        font-size: 30px;
+      }
     }
   }
 `;
@@ -52,17 +73,53 @@ export const Card = styled(motion.div)`
   position: relative;
   border-radius: 5px;
   width: 280px;
-  height: 320px;
+  height: 280px;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   background-color: var(--secondaryPurple);
+  .icons {
+    color: var(--darkBlue);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+  .controller {
+    top: 55px;
+    left: 10px;
+  }
+  .dog {
+    top: 55px;
+    right: 10px;
+  }
+  .code {
+    top: 20px;
+    right: 41%;
+  }
+  .hearts {
+    position: absolute;
+  }
+  .bigHearts {
+    display: none;
+  }
+  .heart1 {
+    top: 90px;
+    left: 45px;
+  }
+  .heart2 {
+    top: 90px;
+    right: 45px;
+  }
+  .heart3 {
+    top: 60px;
+  }
   .infos {
     position: absolute;
     left: 10px;
-    top: 300px;
+    top: 260px;
   }
   img.myPhoto {
+    margin-bottom: 20px;
     width: 138px;
     height: 138px;
   }
@@ -72,13 +129,87 @@ export const Card = styled(motion.div)`
       left: 50vw;
     }
   }
-  @media screen and (min-width: 768px){
-      .infos{
-          display: none;
-      }
+  @media screen and (min-width: 768px) {
+    align-self: center;
+    .infos {
+      display: none;
+    }
   }
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1000px) {
     width: 550px;
     height: 340px;
+    .icons {
+      width: 70px;
+      height: 70px;
+    }
+    .controller {
+      top: 170px;
+      left: 40px;
+    }
+    .dog {
+      top: 170px;
+      right: 40px;
+    }
+    .code {
+      top: 15px;
+      right: 43%;
+    }
+    .hearts {
+      display: none;
+    }
+    .bigHearts {
+      display: block;
+      position: absolute;
+    }
+    .heart1 {
+      top: 150px;
+      left: 120px;
+    }
+    .heart2 {
+      top: 150px;
+      right: 120px;
+    }
+    .heart3 {
+      top: 60px;
+    }
+    img.myPhoto {
+      margin-bottom: 55px;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    width: 750px;
+    height: 500px;
+    .icons {
+      width: 90px;
+      height: 90px;
+    }
+    .controller {
+      top: 260px;
+      left: 40px;
+    }
+    .dog {
+      top: 260px;
+      right: 40px;
+    }
+    .code {
+      top: 15px;
+      right: 43%;
+    }
+    .heart1 {
+      top: 250px;
+      left: 150px;
+    }
+    .heart2 {
+      top: 250px;
+      right: 150px;
+    }
+    .heart3 {
+      top: 100px;
+    }
+    img.myPhoto {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 90px;
+    }
   }
 `;

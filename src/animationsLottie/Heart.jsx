@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Lottie from "react-lottie";
-import * as animationData from "../animation/grabbing.json";
+import * as animationData from "../animation/heart.json";
 
-const Grabbing = () => {
+const Heart = ({size,...rest}) => {
   const [lottieProps, setLottieProps] = useState({
     isStopped: false,
     isPaused: false,
@@ -10,7 +10,7 @@ const Grabbing = () => {
   });
 
   const defaultOptions = {
-    loop: true,
+    loop: false,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
@@ -19,12 +19,12 @@ const Grabbing = () => {
   };
 
   return (
-    <div className="grabbing">
+    <div {...rest}>
       <Lottie
-        speed={1}
+        speed={0.4}
         options={defaultOptions}
-        height={50}
-        width={50}
+        height={size}
+        width={size}
         isStopped={lottieProps.isStopped}
         isPaused={lottieProps.isPaused}
         direction={lottieProps.direction}
@@ -33,4 +33,4 @@ const Grabbing = () => {
   );
 };
 
-export default Grabbing;
+export default Heart;
