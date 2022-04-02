@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const FancyHeader = styled.header`
   width: 100vw;
   position: fixed;
+  top: 0;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 15px;
   div.header--container {
-    width: 80%;
+    width: 90%;
     max-width: 1366px;
     display: flex;
     justify-content: space-between;
@@ -18,6 +20,7 @@ export const FancyHeader = styled.header`
       font-weight: 500;
       font-size: 30px;
       color: var(--white);
+      filter: brightness(1.5);
     }
     div.header--mini--container {
       display: flex;
@@ -47,7 +50,6 @@ export const FancyHeader = styled.header`
         width: 65px;
         height: 65px;
         cursor: pointer;
-        background-color: var(--secondaryPurple);
       }
     }
   }

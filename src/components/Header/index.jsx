@@ -1,22 +1,24 @@
 import Hamburger from "../../animationsLottie/Hamburguer";
 import { FaGithubSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FancyHeader } from "./style";
+import FullNav from "../FullNav";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import {Link} from "react-router-dom"
 
 const Header = () => {
-  //   const [width, setWidth] = useState("");
+  const [showNav, setShowNav] = useState(false);
 
-  //   useEffect(() => {
-  //     setWidth(window.innerWidth);
-  //   }, []);
-
-  //   window.onresize = window.onload = () => {
-  //     setWidth(window.innerWidth);
-  //   };
+  const toogleNav = () => {
+    setShowNav(!showNav);
+  };
 
   return (
     <FancyHeader>
       <div className="header--container">
-        <h3>Marcos Mafei</h3>
+        <Link to={"/"}>
+          <h3>Marcos Mafei</h3>
+        </Link>
         <div className="header--mini--container">
           <div className="header--icons">
             <a
@@ -41,9 +43,10 @@ const Header = () => {
               <FaInstagram className="icons" />
             </a>
           </div>
-          <Hamburger />
+          <Hamburger toogleNav={toogleNav} showNav={showNav} />
         </div>
       </div>
+      <AnimatePresence>{showNav && <FullNav />}</AnimatePresence>
     </FancyHeader>
   );
 };
