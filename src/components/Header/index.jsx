@@ -6,8 +6,13 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import {Link} from "react-router-dom"
 
-const Header = () => {
+const Header = ({setCurrent}) => {
   const [showNav, setShowNav] = useState(false);
+  const [lottieProps, setLottieProps] = useState({
+    isStopped: true,
+    isPaused: false,
+    direction: -1,
+  });
 
   const toogleNav = () => {
     setShowNav(!showNav);
@@ -43,10 +48,10 @@ const Header = () => {
               <FaInstagram className="icons" />
             </a>
           </div>
-          <Hamburger toogleNav={toogleNav} showNav={showNav} />
+          <Hamburger toogleNav={toogleNav} showNav={showNav} lottieProps={lottieProps} setLottieProps={setLottieProps}/>
         </div>
       </div>
-      <AnimatePresence>{showNav && <FullNav />}</AnimatePresence>
+      <AnimatePresence>{showNav && <FullNav setCurrent={setCurrent} toogleNav={toogleNav} setLottieProps={setLottieProps} lottieProps={lottieProps}/>}</AnimatePresence>
     </FancyHeader>
   );
 };

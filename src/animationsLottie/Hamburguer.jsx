@@ -2,12 +2,7 @@ import { useState } from "react";
 import Lottie from "react-lottie";
 import * as animationData from "../animation/hamburger-icon.json";
 
-const Hamburger = ({toogleNav,showNav}) => {
-  const [lottieProps, setLottieProps] = useState({
-    isStopped: true,
-    isPaused: false,
-    direction: -1,
-  });
+const Hamburger = ({toogleNav,showNav,lottieProps,setLottieProps}) => {
 
   const defaultOptions = {
     loop: false,

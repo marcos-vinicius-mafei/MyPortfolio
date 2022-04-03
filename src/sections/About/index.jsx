@@ -12,7 +12,7 @@ const About = ({ current }) => {
   return (
     <>
       {current === 1 && (
-        <Container id="about">
+        <Container id="About">
           <Infos
             className="infos--main"
             initial={{ opacity: 0, marginLeft: "-400px" }}

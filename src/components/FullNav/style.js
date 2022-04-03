@@ -21,11 +21,9 @@ export const FancyNav = styled(motion.div)`
       color: var(--white);
       font-size: 30px;
       font-family: var(--cinzel);
-      a {
-        color: var(--white);
-        &:hover {
-          color: var(--primary-Purple);
-        }
+      cursor: pointer;
+      &:hover {
+        color: var(--primary-Purple);
       }
     }
     @media screen and (min-width: 768px) {

@@ -19,14 +19,31 @@ export const Circles = styled(motion.div)`
     .skills--computer {
       position: absolute;
       width: 250px;
-      top: 40px;
+      top: 60px;
       left: 6px;
+    }
+    .paper--plane {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 40px;
+      left: 20px;
+      pointer-events: none;
+      .mid--plane {
+        display: none;
+      }
+      .big--plane {
+        display: none;
+      }
     }
   }
   .infos {
     position: absolute;
     bottom: -150px;
     left: 30px;
+  }
+  .contact {
+    bottom: -133px;
   }
   @media (min-width: 600px) {
     align-self: start;
@@ -49,6 +66,18 @@ export const Circles = styled(motion.div)`
         top: 75px;
         left: 20px;
       }
+      .paper--plane {
+        width: 250px;
+        height: 250px;
+        top: 50px;
+        left: 30px;
+        .mini--plane {
+          display: none;
+        }
+        .mid--plane {
+          display: block;
+        }
+      }
     }
   }
   @media screen and (min-width: 1300px) {
@@ -59,6 +88,18 @@ export const Circles = styled(motion.div)`
         width: 450px;
         top: 85px;
         left: 0px;
+      }
+      .paper--plane {
+        width: 350px;
+        height: 350px;
+        top: 70px;
+        left: 25px;
+        .mid--plane {
+          display: none;
+        }
+        .big--plane {
+          display: block;
+        }
       }
     }
   }

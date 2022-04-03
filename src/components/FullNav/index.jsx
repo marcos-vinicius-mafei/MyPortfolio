@@ -1,8 +1,7 @@
 import { FancyNav } from "./style";
 import Item from "./Item";
-import {Link} from "react-router-dom"
 
-const FullNav = () => {
+const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
   const variantsNav = {
     initial: { top: -1000 },
     final: { top: 0 },
@@ -11,6 +10,14 @@ const FullNav = () => {
   const variantsItem = {
     initial: { opacity: 0, marginRight: 150 },
     final: { opacity: 1, marginRight: 0 },
+  };
+
+  const toogleLottie = () => {
+    setLottieProps({
+      ...lottieProps,
+      direction: lottieProps.direction * -1,
+      isStopped: false,
+    });
   };
 
   return (
@@ -28,11 +35,61 @@ const FullNav = () => {
       variants={variantsNav}
     >
       <ul>
-        <Item variants={variantsItem}><Link to={"/#icon"}>Home</Link></Item>
-        <Item variants={variantsItem}><Link>About me</Link></Item>
-        <Item variants={variantsItem}><Link>Skills</Link></Item>
-        <Item variants={variantsItem}><Link>Projects</Link></Item>
-        <Item variants={variantsItem}><Link>Contact</Link></Item>
+        <Item
+          variants={variantsItem}
+          onClick={() => {
+            setCurrent(0);
+            toogleLottie();
+            window.scrollTo("#Start", { behavior: "smooth" });
+            toogleNav();
+          }}
+        >
+          Home
+        </Item>
+        <Item
+          variants={variantsItem}
+          onClick={() => {
+            setCurrent(1);
+            toogleLottie();
+            window.scrollTo("#About", { behavior: "smooth" });
+            toogleNav();
+          }}
+        >
+          About me
+        </Item>
+        <Item
+          variants={variantsItem}
+          onClick={() => {
+            setCurrent(2);
+            toogleLottie();
+            window.scrollTo("#Start", { behavior: "smooth" });
+            toogleNav();
+          }}
+        >
+          Skills
+        </Item>
+        <Item
+          variants={variantsItem}
+          onClick={() => {
+            setCurrent(3);
+            toogleLottie();
+            window.scrollTo("#Projects", { behavior: "smooth" });
+            toogleNav();
+          }}
+        >
+          Projects
+        </Item>
+        <Item
+          variants={variantsItem}
+          onClick={() => {
+            setCurrent(4);
+            toogleLottie();
+            window.scrollTo("#Contact", { behavior: "smooth" });
+            toogleNav();
+          }}
+        >
+          Contact
+        </Item>
       </ul>
     </FancyNav>
   );

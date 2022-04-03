@@ -28,6 +28,25 @@ export const Container = styled.div`
       font-size: 20px;
       font-family: var(--firaSans);
     }
+    .email {
+      font-size: 18px;
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+    .icons--container {
+      display: flex;
+      gap: 18px;
+      align-self: start;
+      .icons {
+        color: var(--light);
+        width: 30px;
+        height: 30px;
+        &:hover {
+          filter: brightness(0.7);
+        }
+      }
+    }
   }
   @media screen and (min-width: 600px) {
     .mini--container {
@@ -44,21 +63,14 @@ export const Container = styled.div`
       display: flex;
       .title {
         h1 {
-          width: 300px;
+          width: fit-content;
         }
       }
     }
     .mini--container {
       gap: 30px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .infos--main {
-      display: flex;
-      .title {
-        h1 {
-          width: fit-content;
-        }
+      .email {
+        font-size: 20px;
       }
     }
   }
@@ -87,6 +99,16 @@ export const Container = styled.div`
       h4 {
         width: 400px;
         font-size: 30px;
+      }
+      .email {
+        font-size: 30px;
+      }
+      .icons--container {
+        gap: 70px;
+        .icons {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
     .circles--wrapper {
@@ -174,81 +196,6 @@ export const Card = styled(motion.div)`
   }
   @media screen and (min-width: 1000px) {
     display: none;
-    width: 550px;
-    height: 340px;
-    .icons {
-      width: 70px;
-      height: 70px;
-    }
-    .controller {
-      top: 170px;
-      left: 40px;
-    }
-    .dog {
-      top: 170px;
-      right: 40px;
-    }
-    .code {
-      top: 15px;
-      right: 43%;
-    }
-    .hearts {
-      display: none;
-    }
-    .bigHearts {
-      display: block;
-      position: absolute;
-    }
-    .heart1 {
-      top: 150px;
-      left: 120px;
-    }
-    .heart2 {
-      top: 150px;
-      right: 120px;
-    }
-    .heart3 {
-      top: 60px;
-    }
-    img.myPhoto {
-      margin-bottom: 55px;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    width: 750px;
-    height: 500px;
-    .icons {
-      width: 90px;
-      height: 90px;
-    }
-    .controller {
-      top: 260px;
-      left: 40px;
-    }
-    .dog {
-      top: 260px;
-      right: 40px;
-    }
-    .code {
-      top: 15px;
-      right: 43%;
-    }
-    .heart1 {
-      top: 250px;
-      left: 150px;
-    }
-    .heart2 {
-      top: 250px;
-      right: 150px;
-    }
-    .heart3 {
-      top: 100px;
-    }
-    img.myPhoto {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 90px;
-    }
   }
 `;
 

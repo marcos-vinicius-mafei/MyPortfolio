@@ -13,7 +13,7 @@ const Start = ({ current }) => {
   return (
     <>
       {current === 0 && (
-        <Container id="start">
+        <Container id="Start">
           <Infos
             initial={{ opacity: 0, marginLeft: "-400px" }}
             animate={{ opacity: 1, marginLeft: 0 }}
