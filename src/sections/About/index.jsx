@@ -7,8 +7,10 @@ import { IoLogoGameControllerB } from "react-icons/io";
 import { FaDog, FaCode } from "react-icons/fa";
 import Heart from "../../animationsLottie/Heart";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const About = ({ current }) => {
+
   return (
     <>
       {current === 1 && (
@@ -25,7 +27,7 @@ const About = ({ current }) => {
             </div>
             <div className="mini--container">
               <h4>Passionate about technology, games and animals</h4>
-              <Button>Show more</Button>
+              <Link to="/about"><Button>Show more</Button></Link>
             </div>
           </Infos>
           <Card

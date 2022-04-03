@@ -28,7 +28,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         duration: 0.8,
         bounce: 0,
         when: "beforeChildren",
-        staggerChildren: 0.2,
+        staggerChildren: 0.35,
       }}
       key="ultimateNav"
       exit={{ top: -1000 }}

@@ -53,13 +53,13 @@ const Projects = ({ current }) => {
               display="none"
               initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
               animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-              transition={{ duration: 1.2, delay:0.5, type: "spring" }}
+              transition={{ duration: 1.2, type: "spring" }}
             >
               <motion.div
                 className="circle--blue"
                 initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                transition={{ delay: 0.7, duration: 1.2, type: "spring" }}
+                transition={{ delay: 0.3, duration: 1.2, type: "spring" }}
               >
                 <motion.img
                   src={midScreen}
@@ -67,7 +67,7 @@ const Projects = ({ current }) => {
                   className="project--computer"
                   initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
                   animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                  transition={{ delay: 0.9, duration: 1.2, type: "spring" }}
+                  transition={{ delay: 0.5,duration: 1.2, type: "spring" }}
                 />
               </motion.div>
             </Circles>
