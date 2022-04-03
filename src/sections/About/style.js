@@ -10,6 +10,9 @@ export const Container = styled.div`
   flex-direction: column-reverse;
   align-items: center;
   gap: 50px;
+  .circles--wrapper {
+    display: none;
+  }
   .infos--main {
     display: none;
   }
@@ -59,11 +62,45 @@ export const Container = styled.div`
       }
     }
   }
+  @media screen and (min-width: 1000px) {
+    .circles--wrapper {
+      display: block;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      .circle1 {
+        top: 20px;
+        left: -50px;
+      }
+      .circle2 {
+        top: 120px;
+        left: 135px;
+      }
+      .circle3 {
+        top: 220px;
+        right: 0;
+      }
+    }
+  }
   @media screen and (min-width: 1300px) {
     .mini--container {
       h4 {
         width: 400px;
         font-size: 30px;
+      }
+    }
+    .circles--wrapper {
+      .circle1 {
+        top: 20px;
+        left: -150px;
+      }
+      .circle2 {
+        top: 160px;
+        left: 70px;
+      }
+      .circle3 {
+        top: 300px;
+        right: 0;
       }
     }
   }
@@ -136,6 +173,7 @@ export const Card = styled(motion.div)`
     }
   }
   @media screen and (min-width: 1000px) {
+    display: none;
     width: 550px;
     height: 340px;
     .icons {
@@ -211,5 +249,45 @@ export const Card = styled(motion.div)`
       height: 200px;
       margin-bottom: 90px;
     }
+  }
+`;
+
+export const Circle = styled(motion.div)`
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background-color: var(--primary-Purple);
+  border-radius: 50%;
+  .blue--circle {
+    width: 80%;
+    height: 80%;
+    background-color: var(--darkBlue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon--wrapper {
+      position: relative;
+      .absolute--hearts {
+        position: absolute;
+        top: 10px;
+      }
+      .icons {
+        width: 50px;
+        height: 50px;
+        color: var(--light);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    position: absolute;
+  }
+  @media screen and (min-width: 1300px) {
+    width: 210px;
+    height: 210px;
   }
 `;

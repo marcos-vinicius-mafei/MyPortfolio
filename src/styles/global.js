@@ -38,6 +38,10 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
     }
 
+    img{
+        pointer-events: none;
+    }
+
 `
 
 export default GlobalStyles

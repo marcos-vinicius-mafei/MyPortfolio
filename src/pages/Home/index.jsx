@@ -6,6 +6,7 @@ import { Container } from "./style";
 import ReactPageScroller from "react-page-scroller";
 import { useState } from "react";
 import PagesManager from "../../components/PagesManager"
+import Projects from "../../sections/Projects";
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -27,6 +28,7 @@ const Home = () => {
         <Start current={current}/>
         <About current={current}/>
         <Skills current={current}/>
+        <Projects current={current}/>
       </ReactPageScroller>
     </Container>
   );

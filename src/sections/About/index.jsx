@@ -1,11 +1,12 @@
 import lines from "../../images/lines.svg";
 import Button from "../../components/Button";
-import { Container, Card } from "./style";
+import { Container, Card, Circle } from "./style";
 import { Infos } from "../Start/style";
 import myPicture from "../../images/myPicture.png";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { FaDog, FaCode } from "react-icons/fa";
 import Heart from "../../animationsLottie/Heart";
+import { motion } from "framer-motion";
 
 const About = ({ current }) => {
   return (
@@ -58,6 +59,52 @@ const About = ({ current }) => {
               </div>
             </Infos>
           </Card>
+          <motion.div
+            className="circles--wrapper"
+            initial={{ opacity: 0, marginBottom: "-600px" }}
+            animate={{ opacity: 1, marginBottom: 0 }}
+            transition={{ duration: 1.2, type: "spring" }}
+          >
+            <Circle className="circle1">
+              <motion.div
+                className="blue--circle"
+                initial={{ scaleX: 0, scaleY: 0 }}
+                animate={{ scaleX: 1, scaleY: 1 }}
+                transition={{ duration: 1.2, delay: 0.1, type: "spring" }}
+              >
+                <motion.div className="icon--wrapper">
+                  <Heart className="absolute--hearts" size={100} />
+                  <IoLogoGameControllerB className="icons" />
+                </motion.div>
+              </motion.div>
+            </Circle>
+            <Circle className="circle2">
+              <motion.div
+                className="blue--circle"
+                initial={{ scaleX: 0, scaleY: 0 }}
+                animate={{ scaleX: 1, scaleY: 1 }}
+                transition={{ duration: 1.2, delay: 0.1, type: "spring" }}
+              >
+                <motion.div className="icon--wrapper">
+                  <Heart className="absolute--hearts" size={100} />
+                  <FaCode className="icons" />
+                </motion.div>
+              </motion.div>
+            </Circle>
+            <Circle className="circle3">
+              <motion.div
+                className="blue--circle"
+                initial={{ scaleX: 0, scaleY: 0 }}
+                animate={{ scaleX: 1, scaleY: 1 }}
+                transition={{ duration: 1.2, delay: 0.1, type: "spring" }}
+              >
+                <motion.div className="icon--wrapper">
+                  <Heart className="absolute--hearts" size={100} />
+                  <FaDog className="icons" />
+                </motion.div>
+              </motion.div>
+            </Circle>
+          </motion.div>
         </Container>
       )}
     </>

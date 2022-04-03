@@ -3,6 +3,8 @@ import { Container } from "../About/style";
 import lines from "../../images/lines.svg";
 import Button from "../../components/Button";
 import { Circles } from "./style";
+import { motion } from "framer-motion";
+import skillsComputer from "../../images/skillsComputer.png";
 
 const Skills = ({ current }) => {
   return (
@@ -24,7 +26,26 @@ const Skills = ({ current }) => {
               <Button>Show more</Button>
             </div>
           </Infos>
-          <Circles>
+          <Circles
+            initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
+            transition={{ duration: 1.2, type: "spring" }}
+          >
+            <motion.div
+              className="circle--blue"
+              initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+              animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
+              transition={{ delay: 0.3, duration: 1.2, type: "spring" }}
+            >
+              <motion.img
+                src={skillsComputer}
+                alt="computer with my skills"
+                className="skills--computer"
+                initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
+                transition={{ delay: 0.5, duration: 1.2, type: "spring" }}
+              />
+            </motion.div>
             <Infos
               className="infos"
               initial={{ opacity: 0, marginLeft: "-400px" }}
