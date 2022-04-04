@@ -1,7 +1,10 @@
 import { FancyNav } from "./style";
 import Item from "./Item";
+import { useHistory } from "react-router-dom";
 
 const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
+  const history = useHistory();
+
   const variantsNav = {
     initial: { top: -1000 },
     final: { top: 0 },
@@ -12,7 +15,8 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
     final: { opacity: 1, marginRight: 0 },
   };
 
-  const toogleLottie = () => {
+  const toogleLottieAndPages = () => {
+    history.push("/");
     setLottieProps({
       ...lottieProps,
       direction: lottieProps.direction * -1,
@@ -39,7 +43,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
           variants={variantsItem}
           onClick={() => {
             setCurrent(0);
-            toogleLottie();
+            toogleLottieAndPages();
             window.scrollTo("#Start", { behavior: "smooth" });
             toogleNav();
           }}
@@ -50,7 +54,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
           variants={variantsItem}
           onClick={() => {
             setCurrent(1);
-            toogleLottie();
+            toogleLottieAndPages();
             window.scrollTo("#About", { behavior: "smooth" });
             toogleNav();
           }}
@@ -61,8 +65,8 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
           variants={variantsItem}
           onClick={() => {
             setCurrent(2);
-            toogleLottie();
-            window.scrollTo("#Start", { behavior: "smooth" });
+            toogleLottieAndPages();
+            window.scrollTo("#Skills", { behavior: "smooth" });
             toogleNav();
           }}
         >
@@ -72,7 +76,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
           variants={variantsItem}
           onClick={() => {
             setCurrent(3);
-            toogleLottie();
+            toogleLottieAndPages();
             window.scrollTo("#Projects", { behavior: "smooth" });
             toogleNav();
           }}
@@ -82,8 +86,8 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
+            toogleLottieAndPages();
             setCurrent(4);
-            toogleLottie();
             window.scrollTo("#Contact", { behavior: "smooth" });
             toogleNav();
           }}

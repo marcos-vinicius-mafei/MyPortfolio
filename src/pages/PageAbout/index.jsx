@@ -5,9 +5,8 @@ import { Container } from "./style";
 const PageAbout = () => {
   return (
     <div>
-      <Header />
       <Container>
-        <About current={1} />
+        <About current={1} page/>
       </Container>
     </div>
   );
