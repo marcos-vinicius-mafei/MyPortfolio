@@ -21,6 +21,7 @@ export const FancyHeader = styled.header`
       font-size: 30px;
       color: var(--white);
       filter: brightness(1.5);
+      -webkit-text-stroke: 0.8px var(--darkBlue);
     }
     div.header--mini--container {
       display: flex;
