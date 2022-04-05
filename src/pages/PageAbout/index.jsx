@@ -5,7 +5,7 @@ import myPicture from "../../images/myPicture.png";
 import midScreen from "../../images/midScreen.png";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Sroll from "../../animationsLottie/Scroll";
+import Scroll from "../../animationsLottie/Scroll";
 
 const PageAbout = () => {
 
@@ -70,8 +70,8 @@ const PageAbout = () => {
     <div>
       <Wrapper>
         <About current={1} page />
-        <Sroll className="scroll mini" width={25} height={350} />
-        <Sroll className="scroll big" width={50} height={500} />
+        <Scroll className="scroll mini" width={25} height={350} />
+        <Scroll className="scroll big" width={50} height={500} />
       </Wrapper>
       <MyInfos>
         <Section ref={ref1}>

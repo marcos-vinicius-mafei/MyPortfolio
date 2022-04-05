@@ -3,7 +3,7 @@ import Lottie from "react-lottie";
 import * as animationData from "../animation/scrollDown.json";
 import {motion} from "framer-motion"
 
-const Sroll = ({width,height,...rest}) => {
+const Scroll = ({width,height,...rest}) => {
   const [lottieProps, setLottieProps] = useState({
     isStopped: false,
     isPaused: false,
@@ -36,4 +36,4 @@ const Sroll = ({width,height,...rest}) => {
   );
 };
 
-export default Sroll;
+export default Scroll;

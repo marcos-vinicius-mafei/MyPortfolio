@@ -36,21 +36,9 @@ const About = ({ current, page = false }) => {
             <div className="mini--container">
               <h4>Passionate about technology, games and animals</h4>
               {page ? (
-                <Button
-                  onClick={() => {
-                    history.push("/");
-                  }}
-                >
-                  Show less
-                </Button>
+                <Button url="/">Show less</Button>
               ) : (
-                <Button
-                  onClick={() => {
-                    history.push("/about");
-                  }}
-                >
-                  Show more
-                </Button>
+                <Button url="/about">Show more</Button>
               )}
             </div>
           </Infos>
