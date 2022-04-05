@@ -10,8 +10,7 @@ import { usePage } from "../../providers/currentPage";
 import PagesManager from "../../components/PagesManager";
 
 const Home = () => {
-  const { current, setCurrent } = usePage();
-
+  const { current, setCurrent, changePage } = usePage();
 
   return (
     <Container>
@@ -19,13 +18,17 @@ const Home = () => {
       <ReactPageScroller
         animationTimer={600}
         transitionTimingFunction="ease-in-out"
-        animationTimerBuffer={0.01}
+        animationTimerBuffer={1}
         pageOnChange={(nextPage) => {
-          setCurrent(nextPage);
-          console.log(nextPage);
+          changePage(nextPage);
+          console.log(current);
         }}
         customPageNumber={current}
         renderAllPagesOnFirstRender={true}
+        handleScrollUnavailable={() => {
+          window.scrollTo("#Start", { behavior: "smooth" });
+          setCurrent(0);
+        }}
       >
         <Start current={current} />
         <About current={current} />

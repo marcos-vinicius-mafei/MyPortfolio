@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
         --black: #000;
         --cleanBlack: #222;
         --purple-main: #9D4EDD;
+        --midBlue: #26384E;
         --cinzel: 'Cinzel', serif;
         --cinzelDecorative: 'Cinzel Decorative', cursive;
         --firaSans: 'Fira Sans', sans-serif;
@@ -19,10 +20,22 @@ const GlobalStyles = createGlobalStyle`
         --lobster: 'Lobster', cursive;
     }
 
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--midBlue);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #414F60; 
+        border-radius: 10px;
+    }
+
     body {
         background-color: var(--darkBlue);
         font-size: 12px;
         font-family: var(--inter);
+        overflow-x: hidden;
     }
 
     *{
@@ -42,6 +55,6 @@ const GlobalStyles = createGlobalStyle`
         pointer-events: none;
     }
 
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

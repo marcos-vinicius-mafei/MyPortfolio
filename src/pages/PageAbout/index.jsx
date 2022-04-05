@@ -1,25 +1,88 @@
 import About from "../../sections/About";
 import { Wrapper, MyInfos, Section, Container, Circle } from "./style";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import myPicture from "../../images/myPicture.png";
 import midScreen from "../../images/midScreen.png";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import Sroll from "../../animationsLottie/Scroll";
 
 const PageAbout = () => {
+
+  const [ref1, inView1] = useInView({ triggerOnce: true , threshold: 0.6});
+
+  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.6});
+
+  const Circle1 = useAnimation();
+
+  const Circle2 = useAnimation();
+
+  const Container1 = useAnimation();
+
+  const Container2 = useAnimation();
+
+  useEffect(() => {
+    if (inView1) {
+      Circle1.start({
+        marginLeft: 0,
+        opacity: 1,
+        rotate: 0,
+        transition: {
+          duration: 1.5,
+        },
+      });
+      Container1.start({
+        marginRight: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.5,
+        },
+      });
+    } else {
+      Circle1.start({ opacity: 0, marginLeft: "-400px" });
+      Container1.start({ opacity: 0, marginRight: "-400px" });
+    }
+  }, [inView1]);
+
+  useEffect(() => {
+    if (inView2) {
+      Circle2.start({
+        marginRight: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.5,
+        },
+      });
+      Container2.start({
+        marginLeft: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.5,
+        },
+      });
+    } else {
+      Circle2.start({ opacity: 0, marginRight: "-400px" });
+      Container2.start({ opacity: 0, marginLeft: "-400px" });
+    }
+  }, [inView2]);
+
   return (
     <div>
       <Wrapper>
         <About current={1} page />
+        <Sroll className="scroll mini" width={25} height={350} />
+        <Sroll className="scroll big" width={50} height={500} />
       </Wrapper>
       <MyInfos>
-        <Section>
-          <Circle>
+        <Section ref={ref1}>
+          <Circle animate={Circle1}>
             <motion.img
               src={myPicture}
               alt="A picture of me"
               className="image"
             />
           </Circle>
-          <Container>
+          <Container animate={Container1}>
             <div className="title--container">
               <motion.div className="circle blue" />
               <h3 className="title">Who I am</h3>
@@ -39,17 +102,13 @@ const PageAbout = () => {
             </div>
           </Container>
         </Section>
-        <Section>
-          <Circle>
+        <Section reverse="reverse" ref={ref2}>
+          <Circle animate={Circle2}>
             <motion.div className="blue--circle">
-              <motion.img
-                src={midScreen}
-                alt="A picture of me"
-                className="computer"
-              />
+              <img src={midScreen} alt="A picture of me" className="computer" />
             </motion.div>
           </Circle>
-          <Container>
+          <Container animate={Container2}>
             <div className="title--container">
               <motion.div className="circle purple" />
               <h3 className="title">What I do</h3>

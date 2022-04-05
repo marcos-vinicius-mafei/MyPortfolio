@@ -4,16 +4,36 @@ import { motion } from "framer-motion";
 export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
+  .scroll{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .big{
+    display: none;
+  }
+  @media screen and (min-width:768px){
+    .big{
+      display: block
+    }
+    .mini{
+      display: none;
+    }
+  }
 `;
 
 export const MyInfos = styled.div`
   width: 100vw;
   background-color: var(--primary-Purple);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 65px;
+  padding-bottom: 65px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+
+  @media screen and (min-width: 900px){
+    gap: 120px;
+  }
 `;
 
 export const Circle = styled(motion.div)`
@@ -22,11 +42,28 @@ export const Circle = styled(motion.div)`
   justify-content: center;
   background-color: var(--secondaryPurple);
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   .image {
     width: 80%;
     height: 80%;
+  }
+  .blue--circle {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkBlue);
+    border-radius: 50%;
+    .computer {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 350px;
+    height: 350px;
   }
 `;
 
@@ -38,6 +75,11 @@ export const Section = styled.div`
   width: 80%;
   max-width: 1366px;
   margin-inline: auto;
+  @media screen and (min-width: 900px) {
+    flex-direction: ${(props) =>
+      props.reverse === "reverse" ? "row-reverse" : "row"};
+    justify-content: space-between;
+  }
 `;
 
 export const Container = styled(motion.div)`
@@ -58,12 +100,21 @@ export const Container = styled(motion.div)`
       background-color: var(--darkBlue);
     }
     .purple {
-        background-color: var(--secondaryPurple)
+      background-color: var(--secondaryPurple);
     }
     .title {
       font-size: 30px;
       font-family: var(--cinzel);
       color: var(--light);
+    }
+    @media screen and (min-width: 1200px) {
+      .circle{
+        width: 30px;
+        height: 30px;
+      }
+      .title{
+        font-size: 38px;
+      }
     }
   }
   div {
@@ -81,5 +132,13 @@ export const Container = styled(motion.div)`
         mix-blend-mode: lighten;
       }
     }
+    @media screen and (min-width: 1200px) {
+      p{
+        font-size: 25px;
+      }
+    }
+  }
+  @media screen and (min-width: 900px) {
+    width: 50%;
   }
 `;

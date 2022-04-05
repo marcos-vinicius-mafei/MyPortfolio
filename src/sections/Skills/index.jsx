@@ -43,7 +43,7 @@ const Skills = ({ current }) => {
                 className="skills--computer"
                 initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                transition={{ delay: 0.5, duration: 1.2, type: "spring" }}
+                transition={{duration: 1.2, type: "spring" }}
               />
             </motion.div>
             <Infos

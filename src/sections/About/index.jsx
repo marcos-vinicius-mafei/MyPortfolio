@@ -38,7 +38,6 @@ const About = ({ current, page = false }) => {
               {page ? (
                 <Button
                   onClick={() => {
-                    setCurrent(1);
                     history.push("/");
                   }}
                 >
