@@ -14,7 +14,7 @@ const PageSkills = () => {
       </Wrapper>
       <SkillsContainer>
         <h2 className="title">My Skill Set</h2>
-        {/* <SkillsList/> */}
+        <SkillsList/>
       </SkillsContainer>
     </div>
   );

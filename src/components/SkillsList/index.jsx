@@ -1,10 +1,12 @@
 import SkillCard from "../SkillCard"
+import mySkills from "../../Skills"
+import { FancyList } from "./style"
 
-const SkillsList = ({list}) =>{
+const SkillsList = () =>{
     return(
-        <ul>
-            {list.map(skill => <SkillCard image={skill.image} text={skill.text} url={skill.url}/>)}
-        </ul>
+        <FancyList>
+            {mySkills.map(skill => <SkillCard image={skill.image} text={skill.text} url={skill.url} key={skill.text}/>)}
+        </FancyList>
     )
 }
 

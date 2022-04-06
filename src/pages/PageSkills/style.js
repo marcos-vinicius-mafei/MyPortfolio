@@ -12,6 +12,7 @@ export const SkillsContainer = styled.div`
         font-size: 30px;
         font-family: var(--cinzel);
         color: var(--light);
+        margin-bottom: 100px;
         @media screen and (min-width: 900px){
             font-size: 45px;
         }
