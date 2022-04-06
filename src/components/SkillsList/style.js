@@ -31,5 +31,3 @@ export const FancyList = styled.ul`
         justify-content: space-between;
     }
 `
-
-//
