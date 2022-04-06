@@ -10,7 +10,7 @@ import typescript from "../images/typescript.png";
 
 const mySkills = [
   {
-    text: "css",
+    text: "css 3",
     image: css,
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },

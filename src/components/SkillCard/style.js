@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
     width: 280px;
     text-align: center;
     position: relative;
-    padding-top: 140px;
+    padding-top: 160px;
     .image {
       width: 140px;
       height: 140px;

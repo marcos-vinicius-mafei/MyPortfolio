@@ -18,7 +18,7 @@ const SkillCard = ({ image, text, url }) => {
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
         whileTap={{ cursor: "grabbing" }}
       >
-        <motion.div className="main--content" style={{ x, y, z: 100 }}>
+        <motion.div className="main--content" style={{ x, y, z: 1 }}>
           <motion.img
             className="image"
             src={image}
@@ -29,7 +29,7 @@ const SkillCard = ({ image, text, url }) => {
             whileTap={{ cursor: "grabbing" }}
           />
           <motion.h3
-            style={{ z: 100 }}
+            style={{ z: 1 }}
             drag
             dragElastic={0.12}
             whileTap={{ cursor: "grabbing" }}
