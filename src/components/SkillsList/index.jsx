@@ -6,12 +6,11 @@ const SkillsList = () => {
   return (
     <FancyList>
       {mySkills.map((skill) => (
-        <li>
+        <li key={skill.text}>
           <SkillCard
             image={skill.image}
             text={skill.text}
             url={skill.url}
-            key={skill.text}
           />
         </li>
       ))}

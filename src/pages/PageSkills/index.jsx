@@ -1,10 +1,19 @@
 import { Wrapper } from "../PageAbout/style";
 import Scroll from "../../animationsLottie/Scroll";
 import Skills from "../../sections/Skills";
-import {SkillsContainer} from "./style"
-import SkillsList from "../../components/SkillsList"
+import { SkillsContainer } from "./style";
+import SkillsList from "../../components/SkillsList";
+import ControlButtons from "../../components/ControlButtons";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const PageSkills = () => {
+  const [distance, setDistance] = useState(0);
+
+  window.onscroll = (e) => {
+    setDistance(window.scrollY);
+  };
+
   return (
     <div>
       <Wrapper>
@@ -14,8 +23,11 @@ const PageSkills = () => {
       </Wrapper>
       <SkillsContainer>
         <h2 className="title">My Skill Set</h2>
-        <SkillsList/>
+        <SkillsList />
       </SkillsContainer>
+      <AnimatePresence>
+        {distance >= 975 && <ControlButtons />}
+      </AnimatePresence>
     </div>
   );
 };

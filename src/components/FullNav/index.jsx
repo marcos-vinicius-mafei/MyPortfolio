@@ -15,13 +15,15 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
     final: { opacity: 1, marginRight: 0 },
   };
 
-  const toogleLottieAndPages = () => {
+  const tootleClick = (page) => {
     history.push("/");
     setLottieProps({
       ...lottieProps,
       direction: lottieProps.direction * -1,
       isStopped: false,
     });
+    setCurrent(page);
+    toogleNav();
   };
 
   return (
@@ -42,10 +44,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
-            setCurrent(0);
-            toogleLottieAndPages();
-            window.scrollTo("#Start", { behavior: "smooth" });
-            toogleNav();
+            tootleClick(0);
           }}
         >
           Home
@@ -53,10 +52,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
-            setCurrent(1);
-            toogleLottieAndPages();
-            window.scrollTo("#About", { behavior: "smooth" });
-            toogleNav();
+            tootleClick(1);
           }}
         >
           About me
@@ -64,10 +60,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
-            setCurrent(2);
-            toogleLottieAndPages();
-            window.scrollTo("#Skills", { behavior: "smooth" });
-            toogleNav();
+            tootleClick(2);
           }}
         >
           Skills
@@ -75,10 +68,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
-            setCurrent(3);
-            toogleLottieAndPages();
-            window.scrollTo("#Projects", { behavior: "smooth" });
-            toogleNav();
+            tootleClick(3);
           }}
         >
           Projects
@@ -86,10 +76,7 @@ const FullNav = ({ setCurrent, toogleNav, setLottieProps, lottieProps }) => {
         <Item
           variants={variantsItem}
           onClick={() => {
-            toogleLottieAndPages();
-            setCurrent(4);
-            window.scrollTo("#Contact", { behavior: "smooth" });
-            toogleNav();
+            tootleClick(4);
           }}
         >
           Contact
