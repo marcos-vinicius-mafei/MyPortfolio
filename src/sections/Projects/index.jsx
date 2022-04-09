@@ -7,14 +7,18 @@ import { Container } from "../About/style";
 import midScreen from "../../images/midScreen.png";
 import bigScreen from "../../images/bigScreen.png";
 
-const Projects = ({ current }) => {
+const Projects = ({ current, page = false }) => {
   return (
     <>
       {current === 3 && (
         <Container id="Projects">
           <Infos
             className="infos--main"
-            initial={{ opacity: 0, marginLeft: "-400px" }}
+            initial={
+              page
+                ? { opacity: 1, marginLeft: 0 }
+                : { opacity: 0, marginLeft: "-400px" }
+            }
             animate={{ opacity: 1, marginLeft: 0 }}
             transition={{ duration: 1.2, type: "spring" }}
           >
@@ -24,18 +28,30 @@ const Projects = ({ current }) => {
             </div>
             <div className="mini--container">
               <h4>Some of my previous projects</h4>
-              <Button>Show more</Button>
+              {page ? (
+                <Button url="/">Show less</Button>
+              ) : (
+                <Button url="/projects">Show more</Button>
+              )}
             </div>
           </Infos>
           <Wrapper>
             <Circles
-              initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+              initial={
+                page
+                  ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                  : { opacity: 0, scaleX: 0, scaleY: 0 }
+              }
               animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
               transition={{ duration: 1.2, type: "spring" }}
             >
               <motion.div
                 className="circle--blue"
-                initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                initial={
+                  page
+                    ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                    : { opacity: 0, scaleX: 0, scaleY: 0 }
+                }
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
                 transition={{ delay: 0.3, duration: 1.2, type: "spring" }}
               >
@@ -43,21 +59,33 @@ const Projects = ({ current }) => {
                   src={bigScreen}
                   alt="computer with my project"
                   className="project--big--computer"
-                  initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                  initial={
+                    page
+                      ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                      : { opacity: 0, scaleX: 0, scaleY: 0 }
+                  }
                   animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                  transition={{duration: 1.2, type: "spring" }}
+                  transition={{ duration: 1.2, type: "spring" }}
                 />
               </motion.div>
             </Circles>
             <Circles
               display="none"
-              initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+              initial={
+                page
+                  ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                  : { opacity: 0, scaleX: 0, scaleY: 0 }
+              }
               animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-              transition={{ delay: 0.4,duration: 1.2, type: "spring" }}
+              transition={{ delay: 0.4, duration: 1.2, type: "spring" }}
             >
               <motion.div
                 className="circle--blue"
-                initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                initial={
+                  page
+                    ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                    : { opacity: 0, scaleX: 0, scaleY: 0 }
+                }
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
                 transition={{ delay: 0.6, duration: 1.2, type: "spring" }}
               >
@@ -65,22 +93,34 @@ const Projects = ({ current }) => {
                   src={midScreen}
                   alt="computer with my project"
                   className="project--computer"
-                  initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                  initial={
+                    page
+                      ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                      : { opacity: 0, scaleX: 0, scaleY: 0 }
+                  }
                   animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                  transition={{duration: 1.2, type: "spring" }}
+                  transition={{ duration: 1.2, type: "spring" }}
                 />
               </motion.div>
             </Circles>
           </Wrapper>
           <Circles
             display="initial"
-            initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+            initial={
+              page
+                ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                : { opacity: 0, scaleX: 0, scaleY: 0 }
+            }
             animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
             transition={{ duration: 1.2, type: "spring" }}
           >
             <motion.div
               className="circle--blue"
-              initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+              initial={
+                page
+                  ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                  : { opacity: 0, scaleX: 0, scaleY: 0 }
+              }
               animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
               transition={{ delay: 0.3, duration: 1.2, type: "spring" }}
             >
@@ -88,14 +128,22 @@ const Projects = ({ current }) => {
                 src={midScreen}
                 alt="computer with my project"
                 className="project--computer"
-                initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
+                initial={
+                  page
+                    ? { opacity: 1, scaleX: 1, scaleY: 1 }
+                    : { opacity: 0, scaleX: 0, scaleY: 0 }
+                }
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-                transition={{duration: 1.2, type: "spring" }}
+                transition={{ duration: 1.2, type: "spring" }}
               />
             </motion.div>
             <Infos
               className="infos"
-              initial={{ opacity: 0, marginLeft: "-400px" }}
+              initial={
+                page
+                  ? { opacity: 1, marginLeft: 0 }
+                  : { opacity: 0, marginLeft: "-400px" }
+              }
               animate={{ opacity: 1, marginLeft: 0 }}
               transition={{ duration: 1.2 }}
             >
@@ -105,7 +153,11 @@ const Projects = ({ current }) => {
               </div>
               <div className="mini--container">
                 <h4>Some of my previous projects</h4>
-                <Button>Show more</Button>
+                {page ? (
+                  <Button url="/">Show less</Button>
+                ) : (
+                  <Button url="/projects">Show more</Button>
+                )}
               </div>
             </Infos>
           </Circles>

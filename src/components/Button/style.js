@@ -12,4 +12,9 @@ export const FancyButton = styled.button`
     font-size: 20px;
     border: 0;
     border-radius:10px;
+    transition: 0.6s;
+    &:hover{
+        transition: 0.6s;
+        color: var(--light);
+    }
 `

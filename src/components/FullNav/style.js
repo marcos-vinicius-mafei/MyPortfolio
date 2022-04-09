@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const FancyNav = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   inset: 0;
-  z-index: -1;
+  z-index: 9900;
   background-color: var(--secondaryPurple);
   display: flex;
   align-items: center;

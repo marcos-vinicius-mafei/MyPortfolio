@@ -4,9 +4,9 @@ import { FancyHeader } from "./style";
 import FullNav from "../FullNav";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
-const Header = ({setCurrent}) => {
+const Header = ({ setCurrent }) => {
   const [showNav, setShowNav] = useState(false);
   const [lottieProps, setLottieProps] = useState({
     isStopped: true,
@@ -48,10 +48,26 @@ const Header = ({setCurrent}) => {
               <FaInstagram className="icons" />
             </a>
           </div>
-          <Hamburger toogleNav={toogleNav} showNav={showNav} lottieProps={lottieProps} setLottieProps={setLottieProps}/>
+          <div className="position">
+            <Hamburger
+              toogleNav={toogleNav}
+              showNav={showNav}
+              lottieProps={lottieProps}
+              setLottieProps={setLottieProps}
+            />
+          </div>
         </div>
       </div>
-      <AnimatePresence>{showNav && <FullNav setCurrent={setCurrent} toogleNav={toogleNav} setLottieProps={setLottieProps} lottieProps={lottieProps}/>}</AnimatePresence>
+      <AnimatePresence>
+        {showNav && (
+          <FullNav
+            setCurrent={setCurrent}
+            toogleNav={toogleNav}
+            setLottieProps={setLottieProps}
+            lottieProps={lottieProps}
+          />
+        )}
+      </AnimatePresence>
     </FancyHeader>
   );
 };

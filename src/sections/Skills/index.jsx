@@ -27,7 +27,11 @@ const Skills = ({ current, page = false }) => {
             </div>
             <div className="mini--container">
               <h4>Java Script, Type Script, React, Node.js and more!</h4>
-              {page ? <Button url="/">Show less</Button> : <Button url="/skills">Show more</Button>}
+              {page ? (
+                <Button url="/">Show less</Button>
+              ) : (
+                <Button url="/skills">Show more</Button>
+              )}
             </div>
           </Infos>
           <Circles
@@ -78,7 +82,11 @@ const Skills = ({ current, page = false }) => {
               </div>
               <div className="mini--container">
                 <h4>Java Script, Type Script, React, Node.js and more!</h4>
-                {page ? <Button url="/">Show less</Button> : <Button url="/skills">Show more</Button>}
+                {page ? (
+                  <Button url="/">Show less</Button>
+                ) : (
+                  <Button url="/skills">Show more</Button>
+                )}
               </div>
             </Infos>
           </Circles>
