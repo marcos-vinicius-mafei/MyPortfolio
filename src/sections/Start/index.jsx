@@ -32,9 +32,9 @@ const Start = ({ current }) => {
           <motion.div
             className="circle--wrapper"
             style={{ perspective: 2000 }}
-            initial={{ opacity: 0, marginRight: "-400px" ,rotate: "180deg"}}
-            animate={{ opacity: 1, marginRight: 0,rotate: 0}}
-            transition={{ duration: 1.2, type: "spring" }}
+            initial={{ opacity: 0, marginRight: "-400px", rotate: "180deg" }}
+            animate={{ opacity: 1, marginRight: 0, rotate: 0 }}
+            transition={{ delay: 0.1, duration: 1}}
           >
             <motion.div
               className="circle--computer"

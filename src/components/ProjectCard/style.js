@@ -63,6 +63,9 @@ export const Container = styled(motion.div)`
         color: var(--light);
         border: transparent;
         font-family: var(--firaSans);
+        &:hover{
+          filter: brightness(0.8);
+        }
       }
       .code {
         background-color: var(--darkBlue);
