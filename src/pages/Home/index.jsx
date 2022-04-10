@@ -21,7 +21,6 @@ const Home = () => {
         animationTimerBuffer={1}
         pageOnChange={(nextPage) => {
           changePage(nextPage);
-          console.log(current);
         }}
         customPageNumber={current}
         renderAllPagesOnFirstRender={true}
