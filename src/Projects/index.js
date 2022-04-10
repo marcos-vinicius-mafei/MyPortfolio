@@ -11,6 +11,7 @@ const Projects = [
     website: "https://capstone-m3-projeto-final.vercel.app/",
     code: "https://github.com/victor-sagulo/capstone-m3-projeto-final",
     img: gamesHub,
+    type: "normal",
   },
   {
     title: "KenzieHub",
@@ -19,6 +20,7 @@ const Projects = [
     website: "https://kenzie-hub-marcos-mafei.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s2-kenzie-hub-marcos-vinicius-mafei",
     img: kenzieHub,
+    type: "reverse",
   },
   {
     title: "nuKenzie",
@@ -27,6 +29,7 @@ const Projects = [
     website: "https://nu-kenzie-marcos-mafei.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-nu-kenzie-marcos-vinicius-mafei",
     img: nuKenzie,
+    type: "normal",
   },
   {
     title: "Kenzie Games",
@@ -35,6 +38,7 @@ const Projects = [
     website: "https://kenzie-games-contextapi.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s3-kenzieshop-marcos-vinicius-mafei",
     img: kenzieGames,
+    type: "reverse",
   },
 ];
 

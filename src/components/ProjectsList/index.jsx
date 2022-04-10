@@ -5,7 +5,7 @@ import ProjectCard from "../ProjectCard"
 const ProjectsList = () =>{
     return(
         <FancyList>
-            {Projects.map(project => <li key={project.title}><ProjectCard title={project.title} description={project.description} website={project.website} code={project.code} img={project.img}/></li>)}
+            {Projects.map(project => <li key={project.title}><ProjectCard title={project.title} description={project.description} website={project.website} code={project.code} img={project.img} type={project.type}/></li>)}
         </FancyList>
     )
 }

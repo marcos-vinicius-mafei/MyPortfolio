@@ -72,64 +72,75 @@ export const Container = styled(motion.div)`
       }
     }
   }
-  @media screen and (min-width:768px){
-      flex-direction: row;
-      justify-content: center;
-      width: 600px;
-      .containers{
-          width: 50%;
-          height: 300px;
-      }
-      .image{
-          border-top-right-radius: 0;
-          border-bottom-left-radius: 5px;
-      }
-      .infos{
-          border-top-right-radius: 5px;
-          border-bottom-left-radius: 0;
-          padding: 0;
-          justify-content: space-around;
-      }
+  @media screen and (min-width: 768px) {
+    flex-direction: ${(props) =>
+      props.type === "normal" ? "row" : "row-reverse"};
+    justify-content: center;
+    width: 600px;
+    .containers {
+      width: 50%;
+      height: 300px;
+    }
+    .image {
+      border-top-right-radius: ${(props) =>
+        props.type === "normal" ? 0 : "5px"};
+        border-bottom-right-radius: ${(props) =>
+        props.type === "normal" ? 0 : "5px"};
+      border-bottom-left-radius: ${(props) =>
+        props.type === "normal" ? "5px" : 0};
+      border-top-left-radius: ${(props) =>
+        props.type === "normal" ? "5px" : 0};
+    }
+    .infos {
+      border-top-right-radius: ${(props) =>
+        props.type === "normal" ? "5px" : 0};
+      border-bottom-left-radius: ${(props) =>
+        props.type === "normal" ? 0 : "5px"};
+      border-top-left-radius: ${(props)=>props.type === "normal"? 0 : "5px"};
+      border-bottom-right-radius: ${(props)=>props.type === "normal"? "5px" : 0};
+      padding: 0;
+      justify-content: space-around;
+    }
   }
   @media screen and (min-width: 950px) {
     width: 750px;
-    .containers{
-        height: 350px
+    .containers {
+      height: 350px;
     }
-    .infos{
-        h4{
-            font-size: 30px;
+    .infos {
+      h4 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+      .buttons {
+        button {
+          width: 150px;
+          height: 35px;
+          font-size: 20px;
         }
-        p{
-            font-size:20px;
-        }
-        .buttons{
-            button{
-                width: 150px;
-                height: 35px;
-                font-size: 20px;
-            }
-        }
+      }
     }
   }
-  @media screen and (min-width:1300px){
-      width: 1000px;
-      .containers{
-          height: 400px;
+  @media screen and (min-width: 1300px) {
+    width: 1000px;
+    .containers {
+      height: 400px;
+    }
+    .infos {
+      h4 {
+        font-size: 35px;
       }
-      .infos{
-          h4{
-              font-size: 35px;
-          }
-          p{
-              font-size: 24px;
-          }
-          .buttons{
-              gap: 20px;
-              button{
-                  height: 45px;
-              }
-          }
+      p {
+        font-size: 24px;
       }
+      .buttons {
+        gap: 20px;
+        button {
+          height: 45px;
+        }
+      }
+    }
   }
 `;
