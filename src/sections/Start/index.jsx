@@ -34,7 +34,7 @@ const Start = ({ current }) => {
             style={{ perspective: 2000 }}
             initial={{ opacity: 0, marginRight: "-400px", rotate: "180deg" }}
             animate={{ opacity: 1, marginRight: 0, rotate: 0 }}
-            transition={{ delay: 0.1, duration: 1}}
+            transition={{ delay: 0.1, duration: 1.5, type: "spring"}}
           >
             <motion.div
               className="circle--computer"

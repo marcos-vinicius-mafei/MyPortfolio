@@ -12,7 +12,7 @@ const Routes = () => {
         <motion.div
           initial={{ opacity: 0, scaleX: 0, scaleY: 0 }}
           animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1.2 }}
         >
           <Home />
         </motion.div>
