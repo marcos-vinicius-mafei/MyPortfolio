@@ -7,13 +7,8 @@ import { IoLogoGameControllerB } from "react-icons/io";
 import { FaDog, FaCode } from "react-icons/fa";
 import Heart from "../../animationsLottie/Heart";
 import { motion } from "framer-motion";
-import { useHistory } from "react-router-dom";
-import { usePage } from "../../providers/currentPage";
 
 const About = ({ current, page = false }) => {
-  const history = useHistory();
-
-  const { setCurrent } = usePage();
 
   return (
     <>

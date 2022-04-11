@@ -134,8 +134,9 @@ export const Card = styled(motion.div)`
   width: 280px;
   height: 280px;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
   background-color: var(--secondaryPurple);
   .icons {
     color: var(--darkBlue);
@@ -178,7 +179,10 @@ export const Card = styled(motion.div)`
     top: 260px;
   }
   img.myPhoto {
-    margin-bottom: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -69px;
     width: 138px;
     height: 138px;
   }
