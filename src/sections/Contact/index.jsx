@@ -67,9 +67,9 @@ const Contact = ({ current }) => {
                 animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
                 transition={{ delay: 0.5, duration: 1.2, type: "spring" }}
               >
-                  <PaperPlane className="mini--plane" size={200}/>
-                  <PaperPlane className="mid--plane" size={280}/>
-                  <PaperPlane className="big--plane" size={380}/>
+                <PaperPlane className="mini--plane" size={200} />
+                <PaperPlane className="mid--plane" size={280} />
+                <PaperPlane className="big--plane" size={380} />
               </motion.div>
             </motion.div>
             <Infos
@@ -87,9 +87,27 @@ const Contact = ({ current }) => {
                   <h4 className="email">marcosmafeimachado@gmail.com</h4>
                 </a>
                 <div className="icons--container">
-                  <FaLinkedin className="icons" />
-                  <FaGithubSquare className="icons" />
-                  <FaInstagram className="icons" />
+                  <a
+                    href="https://www.linkedin.com/in/marcosvin%C3%ADciusmafeimachado/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaLinkedin className="icons" />
+                  </a>
+                  <a
+                    href="https://github.com/marcos-vinicius-mafei"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaGithubSquare className="icons" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/marcosmafei/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaInstagram className="icons" />
+                  </a>
                 </div>
               </div>
             </Infos>
