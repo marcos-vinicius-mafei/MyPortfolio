@@ -1,3 +1,4 @@
+import sneakerME from "../images/sneakerME.png"
 import gamesHub from "../images/gamesHub.png";
 import kenzieHub from "../images/kenzieHub.png";
 import nuKenzie from "../images/nuKenzie.png";
@@ -5,13 +6,22 @@ import kenzieGames from "../images/kenzieGames.png";
 
 const Projects = [
   {
+    title: "Sneaker.ME",
+    description:
+      "A modern sneaker E-Commerce. The user can search for thousands of sneakers and add them to the cart.",
+    website: "https://sneakersme.vercel.app/",
+    code: "https://github.com/marcos-vinicius-mafei/sneakers.me",
+    img: sneakerME,
+    type: "normal",
+  },
+  {
     title: "Games Hub",
     description:
       "A platform where users can rate their favorite games, see other people's ratings, like their favorite games, like comments and more.",
     website: "https://capstone-m3-projeto-final.vercel.app/",
     code: "https://github.com/victor-sagulo/capstone-m3-projeto-final",
     img: gamesHub,
-    type: "normal",
+    type: "reverse",
   },
   {
     title: "KenzieHub",
@@ -20,7 +30,7 @@ const Projects = [
     website: "https://kenzie-hub-marcos-mafei.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s2-kenzie-hub-marcos-vinicius-mafei",
     img: kenzieHub,
-    type: "reverse",
+    type: "normal",
   },
   {
     title: "nuKenzie",
@@ -29,7 +39,7 @@ const Projects = [
     website: "https://nu-kenzie-marcos-mafei.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-nu-kenzie-marcos-vinicius-mafei",
     img: nuKenzie,
-    type: "normal",
+    type: "reverse",
   },
   {
     title: "Kenzie Games",
@@ -38,7 +48,7 @@ const Projects = [
     website: "https://kenzie-games-contextapi.vercel.app/",
     code: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s3-kenzieshop-marcos-vinicius-mafei",
     img: kenzieGames,
-    type: "reverse",
+    type: "normal",
   },
 ];
 
