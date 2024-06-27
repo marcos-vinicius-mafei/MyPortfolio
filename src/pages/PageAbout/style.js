@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  .scroll{
+  .scroll {
     position: absolute;
     left: 0;
     bottom: 0;
   }
-  .big{
+  .big {
     display: none;
   }
-  @media screen and (min-width:768px){
-    .big{
-      display: block
+  @media screen and (min-width: 768px) {
+    .big {
+      display: block;
     }
-    .mini{
+    .mini {
       display: none;
     }
   }
@@ -31,7 +31,7 @@ export const MyInfos = styled.div`
   flex-direction: column;
   gap: 60px;
 
-  @media screen and (min-width: 900px){
+  @media screen and (min-width: 900px) {
     gap: 120px;
   }
 `;
@@ -108,11 +108,11 @@ export const Container = styled(motion.div)`
       color: var(--light);
     }
     @media screen and (min-width: 1200px) {
-      .circle{
+      .circle {
         width: 30px;
         height: 30px;
       }
-      .title{
+      .title {
         font-size: 38px;
       }
     }
@@ -131,9 +131,15 @@ export const Container = styled(motion.div)`
         color: var(--light);
         mix-blend-mode: lighten;
       }
+      a {
+        color: var(--light);
+      }
+      a:hover {
+        color: var(--secondaryPurple);
+      }
     }
     @media screen and (min-width: 1200px) {
-      p{
+      p {
         font-size: 25px;
       }
     }

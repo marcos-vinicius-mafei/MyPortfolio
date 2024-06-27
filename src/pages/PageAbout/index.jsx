@@ -66,7 +66,6 @@ const PageAbout = () => {
     }
   }, [inView2]);
 
-
   return (
     <div>
       <Wrapper>
@@ -90,15 +89,20 @@ const PageAbout = () => {
             </div>
             <div>
               <p>
-                My name is Marcos Vinícius Mafei Machado. I was born in Santa
-                Catarina, Brazil in 2003. I'm passionate about animals, that's
-                why I have four pets. I like to play some games in my spare time
-                and have fun on calls with my friends.
+                Hello! I’m Marcos Vinícius Mafei Machado, a tech enthusiast born
+                in 2003 in Santa Catarina, Brazil. From an early age, I have
+                been fascinated by the endless possibilities of technology, and
+                my passion for this dynamic field continues to grow. I thrive on
+                continuous learning and innovation, always seeking to expand my
+                knowledge and skills.
               </p>
               <p>
-                I've always loved technology and I'm becoming more and more
-                fascinated and excited about everything the tech world has to
-                offer. It's amazing to work with something you truly love.
+                When I’m not immersed in the tech world, I am an animal lover
+                and proud pet parent to four wonderful companions. In my free
+                time, I enjoy playing story-driven games and exploring new
+                worlds. I also love being part of tech communities and
+                participating in programming events, where I can connect with
+                others and stay updated on the latest trends and advancements.
               </p>
             </div>
           </Container>
@@ -115,12 +119,15 @@ const PageAbout = () => {
               <h3 className="title">What I do</h3>
             </div>
             <div>
+              <p>I work as a Full Stack Web & Mobile Developer.</p>
               <p>
-                I am currently a front-end Dev and computer engineering student.
+                I have successfully completed numerous projects and am dedicated
+                to continuously enhancing my skills. My goal is to consistently
+                deliver exceptional results while growing and evolving in my
+                expertise.
               </p>
               <p>
-                I have already carried out several projects and I seek to
-                continue evolving my skills more and more.
+              For more details on my experience and background, please take a look at <a href="https://marcos-vinicius-mafei.github.io/Resume/">my full resume</a>.
               </p>
             </div>
           </Container>
