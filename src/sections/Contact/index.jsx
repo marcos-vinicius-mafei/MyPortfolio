@@ -4,7 +4,7 @@ import lines from "../../images/lines.svg";
 import { Circles } from "../Skills/style";
 import { motion } from "framer-motion";
 import PaperPlane from "../../animationsLottie/PaperPlane";
-import { FaGithubSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaIdBadge, FaLinkedin } from "react-icons/fa";
 
 const Contact = ({ current }) => {
   return (
@@ -41,11 +41,11 @@ const Contact = ({ current }) => {
                   <FaGithubSquare className="icons" />
                 </a>
                 <a
-                  href="https://www.instagram.com/marcosmafei/"
+                  href="https://marcos-vinicius-mafei.github.io/Resume/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FaInstagram className="icons" />
+                  <FaIdBadge className="icons" />
                 </a>
               </div>
             </div>
@@ -102,11 +102,11 @@ const Contact = ({ current }) => {
                     <FaGithubSquare className="icons" />
                   </a>
                   <a
-                    href="https://www.instagram.com/marcosmafei/"
+                    href="https://marcos-vinicius-mafei.github.io/Resume/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <FaInstagram className="icons" />
+                    <FaIdBadge className="icons" />
                   </a>
                 </div>
               </div>

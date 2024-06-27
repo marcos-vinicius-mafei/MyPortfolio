@@ -39,10 +39,11 @@ export const FancyHeader = styled.header`
         @media screen and (min-width: 768px) {
           display: flex;
           justify-content: space-between;
+          align-items: center;
           width: 160px;
         }
       }
-      .position{
+      .position {
         width: 65px;
         height: 65px;
         position: relative;

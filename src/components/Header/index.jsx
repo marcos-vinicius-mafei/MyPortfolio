@@ -1,5 +1,5 @@
 import Hamburger from "../../animationsLottie/Hamburguer";
-import { FaGithubSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaIdBadge, FaLinkedin } from "react-icons/fa";
 import { FancyHeader } from "./style";
 import FullNav from "../FullNav";
 import { useState } from "react";
@@ -41,11 +41,11 @@ const Header = ({ setCurrent }) => {
               <FaGithubSquare className="icons" />
             </a>
             <a
-              href="https://www.instagram.com/marcosmafei/"
+              href="https://marcos-vinicius-mafei.github.io/Resume/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <FaInstagram className="icons" />
+              <FaIdBadge className="icons" />
             </a>
           </div>
           <div className="position">
