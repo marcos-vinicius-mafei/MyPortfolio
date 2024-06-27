@@ -24,9 +24,9 @@ const Start = ({ current }) => {
               <img src={lines} alt="dashes" />
             </div>
             <div className="mini--titles">
-              <h4 className="dev">Web Developer</h4>
+              <h4 className="dev">Full Stack Web</h4>
               <h4 className="and">{"&"}</h4>
-              <h4 className="engineer">Computer Engineering</h4>
+              <h4 className="engineer">Mobile Developer</h4>
             </div>
           </Infos>
           <motion.div
