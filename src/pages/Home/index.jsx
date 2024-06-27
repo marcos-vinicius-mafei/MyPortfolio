@@ -1,4 +1,3 @@
-import Header from "../../components/Header";
 import Start from "../../sections/Start";
 import About from "../../sections/About";
 import Skills from "../../sections/Skills";

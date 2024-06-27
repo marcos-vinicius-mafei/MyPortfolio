@@ -1,12 +1,12 @@
 import About from "../../sections/About";
 import { Wrapper, MyInfos, Section, Container, Circle } from "./style";
-import { motion, useAnimation,AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import myPicture from "../../images/myPicture.png";
 import midScreen from "../../images/midScreen.png";
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Scroll from "../../animationsLottie/Scroll";
-import ControlButtons from "../../components/ControlButtons";
+import ControlButtonsPresence from "../../components/ControlButtonsPresence";
 
 const PageAbout = () => {
   const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.6 });
@@ -66,11 +66,6 @@ const PageAbout = () => {
     }
   }, [inView2]);
 
-  const [distance, setDistance] = useState(0);
-
-  window.onscroll = (e) => {
-    setDistance(window.scrollY);
-  };
 
   return (
     <div>
@@ -131,7 +126,7 @@ const PageAbout = () => {
           </Container>
         </Section>
       </MyInfos>
-      <AnimatePresence>{distance >= 500 && <ControlButtons />}</AnimatePresence>
+      <ControlButtonsPresence />
     </div>
   );
 };

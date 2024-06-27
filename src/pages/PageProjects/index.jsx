@@ -2,18 +2,10 @@ import { Wrapper } from "../PageAbout/style";
 import Scroll from "../../animationsLottie/Scroll";
 import Projects from "../../sections/Projects";
 import { ProjectsContainer } from "./style";
-import ControlButtons from "../../components/ControlButtons";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import ProjectsList from "../../components/ProjectsList";
+import ControlButtonsPresence from "../../components/ControlButtonsPresence";
 
 const PageProjects = () => {
-  const [distance, setDistance] = useState(0);
-
-  window.onscroll = (e) => {
-    setDistance(window.scrollY);
-  };
-
   return (
     <div>
       <Wrapper>
@@ -23,9 +15,9 @@ const PageProjects = () => {
       </Wrapper>
       <ProjectsContainer>
         <h2 className="title">My Projects</h2>
-        <ProjectsList/>
+        <ProjectsList />
       </ProjectsContainer>
-      <AnimatePresence>{distance >= 975 && <ControlButtons />}</AnimatePresence>
+      <ControlButtonsPresence presenceDistance={975} />
     </div>
   );
 };
