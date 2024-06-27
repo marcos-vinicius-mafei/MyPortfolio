@@ -27,7 +27,7 @@ const Header = ({ setCurrent }) => {
         <div className="header--mini--container">
           <div className="header--icons">
             <a
-              href="https://www.linkedin.com/in/marcosvin%C3%ADciusmafeimachado/"
+              href="https://www.linkedin.com/in/marcosmafei/"
               rel="noopener noreferrer"
               target="_blank"
             >
