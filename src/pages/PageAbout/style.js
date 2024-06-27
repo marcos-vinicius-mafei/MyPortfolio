@@ -117,6 +117,11 @@ export const Container = styled(motion.div)`
       }
     }
   }
+
+  .extra--padding {
+    padding-bottom: 30px;
+  }
+
   div {
     display: flex;
     flex-direction: column;

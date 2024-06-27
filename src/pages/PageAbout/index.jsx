@@ -118,7 +118,7 @@ const PageAbout = () => {
               <motion.div className="circle purple" />
               <h3 className="title">What I do</h3>
             </div>
-            <div>
+            <div className="extra--padding">
               <p>I work as a Full Stack Web & Mobile Developer.</p>
               <p>
                 I have successfully completed numerous projects and am dedicated
