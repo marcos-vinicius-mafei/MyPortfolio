@@ -26,7 +26,7 @@ const Skills = ({ current, page = false }) => {
               <img src={lines} alt="dashes" />
             </div>
             <div className="mini--container">
-              <h4>Java Script, Type Script, React, Node.js and more!</h4>
+              <h4>JavaScript, TypeScript, React, Node.js and more!</h4>
               {page ? (
                 <Button url="/">Show less</Button>
               ) : (
@@ -81,7 +81,7 @@ const Skills = ({ current, page = false }) => {
                 <img src={lines} alt="dashes" />
               </div>
               <div className="mini--container">
-                <h4>Java Script, Type Script, React, Node.js and more!</h4>
+                <h4>JavaScript, TypeScript, React, Node.js and more!</h4>
                 {page ? (
                   <Button url="/">Show less</Button>
                 ) : (
