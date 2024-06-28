@@ -1,7 +1,7 @@
 import About from "../../sections/About";
 import { Wrapper, MyInfos, Section, Container, Circle } from "./style";
 import { motion, useAnimation } from "framer-motion";
-import myPicture from "../../images/myPicture.png";
+import myPicture from "../../images/me.png";
 import midScreen from "../../images/midScreen.png";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -75,7 +75,7 @@ const PageAbout = () => {
       </Wrapper>
       <MyInfos>
         <Section ref={ref1}>
-          <Circle animate={Circle1}>
+          <Circle animate={Circle1} blueBorder>
             <motion.img
               src={myPicture}
               alt="A picture of me"

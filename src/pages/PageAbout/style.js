@@ -40,7 +40,8 @@ export const Circle = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--secondaryPurple);
+  background-color: ${({ blueBorder }) =>
+    blueBorder ? "var(--darkBlue)" : "var(--secondaryPurple)"};
   border-radius: 50%;
   width: 280px;
   height: 280px;
