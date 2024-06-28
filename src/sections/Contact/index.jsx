@@ -27,7 +27,7 @@ const Contact = ({ current }) => {
               </a>
               <div className="icons--container">
                 <a
-                  href="https://www.linkedin.com/in/marcosvin%C3%ADciusmafeimachado/"
+                  href="https://www.linkedin.com/in/marcosmafei/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -88,7 +88,7 @@ const Contact = ({ current }) => {
                 </a>
                 <div className="icons--container">
                   <a
-                    href="https://www.linkedin.com/in/marcosvin%C3%ADciusmafeimachado/"
+                    href="https://www.linkedin.com/in/marcosmafei/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
